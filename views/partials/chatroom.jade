@@ -5,7 +5,7 @@ h2 Welcome to the "{{room.name}}" chat room
 .col
   h3 Messages
   .overflowable
-    p(ng-repeat='message in room.messages',
+    p(ng-cloak, ng-repeat='message in room.messages',
       ng-class='{alert: message.user == "alert"}') {{message.user}}: {{message.text}}
 
   form(ng-submit='sendMessage()')
@@ -15,4 +15,4 @@ h2 Welcome to the "{{room.name}}" chat room
 .col
   h3 Users
   .overflowable
-    p(ng-repeat='user in room.users') {{user}}
+    p(ng-cloak, ng-repeat='user in room.users') {{user}}
