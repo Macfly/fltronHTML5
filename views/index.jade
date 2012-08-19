@@ -6,13 +6,13 @@ block body
     .col
       h3 Messages
       .overflowable
-        p(ng-repeat='message in messages',
+        p(ng-cloak, ng-repeat='message in messages',
           ng-class='{alert: message.user == "chatroom"}') {{message.user}}: {{message.text}}
 
     .col
       h3 Users
       .overflowable
-        p(ng-repeat='user in users') {{user}}
+        p(ng-cloak, ng-repeat='user in users') {{user}}
 
     .clr
       form(ng-submit='sendMessage()')
